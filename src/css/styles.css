@@ -1,0 +1,536 @@
+html {
+    font-family: "Helvetica Neue", Helvetica;
+    background: #1d1d1d;
+    scroll-behavior: smooth;
+}
+
+
+
+/* Barre de défilement entière */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Bouton de la barre de défilement */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(145, 145, 145, 0.6);
+    border-radius: 6px; /* Arrondi des coins */
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+
+/* Bouton de la barre de défilement au survol */
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(125, 125, 125, 0.8);
+}
+
+/* Rail de la barre de défilement */
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton (haut et bas) de la barre de défilement */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #1d1d1d !important;
+}
+
+.logo{
+    font-weight: bold;
+    color: #b4a0c0
+}
+
+.navbar .logo {
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.presentation img {
+    border-radius: 50%; 
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+
+.presentation img:hover {
+    transform: scale(1.1);
+}
+
+.presentation h2 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.presentation p {
+    text-align: center;
+    margin-bottom: 13px;
+    color: #d3dcd6;
+}
+
+.presentation .btn {
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 14px 16px;
+    text-align: center;
+    cursor: pointer; /* Ceci rendra le curseur en forme de main lorsqu'il survole le bouton, indiquant qu'il est cliquable */
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+}
+
+.btn-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.presentation .btn-contact {
+    background-color: #b4a0c0;
+    color: white;
+}
+
+.presentation .btn-features {
+    background-color: #b4a0c0; 
+    color: white;
+}
+
+button a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.trans {
+    background-color: #262626;
+    position: relative;
+    padding-top: 30px;
+}
+
+.trans::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(-45deg, #1d1d1d 1%, #1d1d1d 25%, #262626 75%, #262626 50%, #1d1d1d 75%, #1d1d1d 75%, #262626 75%, #262626 75%);
+    background-size: 20px 100px;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20px 0;
+    }
+}
+
+.trans::before {
+    animation: wave 2s infinite;
+}
+
+
+.section-title {
+    margin: 50px 10px 0px 10px;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+.card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
+    background-color: #1d1d1d;
+}
+
+.card {
+    background-color: #262626;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin: 10px 30px 30px 30px;
+    width: calc(33% - 20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card .card-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    color: #b4a0c0;
+}
+
+.card h3 {
+    color: whitesmoke;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card p {
+    color: #d3dcd6;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.divider {
+    width: 85%;
+    height: 1px;
+    background-color: #333333;
+    margin: 20px auto 0;
+}
+
+
+
+
+.commands-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 50px 100px;
+}
+
+.card-category {
+    width: 150px;
+    padding: 30px;
+    color: #b4a0c0;
+    box-sizing: border-box; 
+    position: relative;
+    height: 50%;
+}
+
+.card-commands {
+    width: 50%;
+}
+
+.category-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.commands-title {
+    color: #b4a0c0 !important;
+}
+
+.category-list li {
+    padding: 10px 20px 10px 20px;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+.category-list li:hover {
+    background-color: #1d1d1d;
+}
+
+.command-group {
+    display: none;
+    color: white;
+}
+
+.command-group.active {
+    display: block;
+}
+
+.column-headers {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 2px solid #444;
+    font-weight: bold;
+}
+
+.command-header{
+    flex-basis: 100%;
+    color: white;
+}
+
+.description-header{
+    flex-basis: 100%;
+    text-align: left;
+    color: white;
+}
+
+.usage-header {
+    flex-basis: 100%;
+    text-align: right;
+    color: white;
+}
+
+.command {
+    flex-basis: 100%;
+    color: white;
+}
+
+.description{
+    flex-basis: 100%;
+    color: #d3dccb;
+    text-align: left;
+}
+
+.usage {
+    flex-basis: 100%;
+    text-align: right;
+    color: white;
+    font-weight: bold;
+}
+
+.command-group ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.command-group li {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 1px;
+    border-bottom: 1px solid #444;
+}
+
+
+/* Ajoutez ceci à votre fichier styles.css existant */
+.login-container {
+    background-color: #1d1d1d;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 100px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h2 {
+    color: white;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    color: #d3dcd6;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #262626;
+    color: white;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #b4a0c0;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #a090c0;
+}
+
+/* Styles pour les containers de shynolog.html */
+.container {
+    background-color: #262626;
+    color: #d3dcd6;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 251px;
+    padding: 20px;
+    margin: 26px auto;
+    transition: transform 1s ease;
+    text-align: center;
+}
+
+
+.container input, .container button {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+    margin-top: 44px;
+    border-radius: 12px;
+    padding-left: 10px;
+    border: 0px solid #333;
+    background-color: #1d1d1d;
+    color: white;
+    font-size: 17px;
+}
+
+.container button {
+    background-color: #b4a0c0; /* Bouton de connexion */
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.container button:hover {
+    background-color: #a090c0;
+    transition: 0.5s;
+}
+
+.container p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container span{
+    font-size: 15px;
+}
+
+/* Animation de chargement */
+.gear img {
+    width: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Cacher les éléments par défaut */
+.hidden {
+    display: none;
+}
+
+
+
+/* Styles pour chaque élément de texte */
+#licenseKeyDisplay,
+#passphraseDisplay,
+#expirationDateDisplay {
+    max-width: 100%; /* Largeur maximale */
+    word-wrap: break-word; /* Permettre le passage à la ligne si nécessaire */
+}
+
+#loginContainer, #dashboardContainer {
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.contact-container {
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px auto;
+    margin-bottom: 120px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #1d1d1d;
+    color: white;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.btn-contact {
+    background-color: #b4a0c0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.btn-contact:hover {
+    background-color: #a090c0;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="..//img/profile.png" />
+    <link href="..//css/styles.css" rel="stylesheet" />
+    <title>ShynoLogin</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="../../index.html" class="logo">ShynoBot</a>
+        <div class="nav-links">
+            <a href="index.html#features">Features</a>
+            <a href="index.html#commands">Commands</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="shynologin.html">ShynoLogin</a>
+        </div>
+    </div>
+    <div class="trans"><h1>...</h1></div>
+    <div id="loginContainer" class="container">
+        <form id="loginForm">
+            <div class="presentation">
+                <img src="../img/profile.png" alt="Photo de profil ShynoBot"> 
+                <input type="text" id="licenseKey" placeholder="License Key">
+                <input type="password" id="passphrase" placeholder="Passphrase">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    <div id="loadingContainer" class="container hidden">
+        <div class="gear"><img src="../img/load.gif"></div>
+    </div>
+    <div id="dashboardContainer" class="container hidden">
+        <div class="presentation">
+            <img src="../img/profile.png" alt="Photo de profil ShynoBot"> 
+        </div>
+        <p>License Key</p>
+        <span id="licenseKeyDisplay"></span>
+        <p>Passphrase:</p>
+        <span id="passphraseDisplay"></span>
+        <p>Expiration Date:</p>
+        <span id="expirationDateDisplay"></span>
+        <button id="logoutButton">Logout</button>
+    </div>
+    <footer class="footer">
+        <p>Made with ❤️ by Showzur</p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
