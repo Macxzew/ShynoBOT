@@ -9,7 +9,7 @@
 
 > **ShynoBot** is a robust and multifunctional Discord bot, designed for efficient moderation and enhanced user interaction. It stands shoulder to shoulder with popular bots such as Koya, MEE6, Carl, and Dyno. In addition to its powerful moderation features, ShynoBot offers a variety of interactive commands, customization options, and server administration functions.
 
-<img alt="Shyno" src="assets/shyno-help.png" width="700"/>
+<img alt="Shyno" src="src/img/shyno-help.png" width="700"/>
 
 ##  👇 Downloads
 
@@ -59,7 +59,7 @@ After successfully installing the necessary dependencies and setting up the envi
 ```
 node start.js
 ```
-<img alt="Shyno" src="assets/shyno-start.png"/>
+<img alt="Shyno" src="src/img/shyno-start.png"/>
 
 Upon launching the bot, you will be presented with two options:
 1. **Activate the bot using an Activation Key:** This is the first option that will be available to you. After purchasing the bot, you will be provided with an activation key. Use this key to start and operate your bot.
