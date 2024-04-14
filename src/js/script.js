@@ -27,7 +27,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     var loadingContainer = document.getElementById('loadingContainer');
     loadingContainer.style.transform = 'translateY(0)';
     loadingContainer.classList.remove('hidden');
-    document.querySelector('.gear img').src = 'load.gif';
+    document.querySelector('.gear img').src = 'https://raw.githubusercontent.com/shwzr/ShynoBot/main/src/img/load.gif';
     var loginContainer = document.getElementById('loginContainer');
 
     fetch('https://shyno-api.glitch.me/validate', {
