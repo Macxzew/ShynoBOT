@@ -104,7 +104,7 @@ function sendEmail() {
                           "&body=" + encodeURIComponent(message);
         window.open(outlookLink, '_blank').focus();
     } else if (email.endsWith("@orange.fr") || email.endsWith("@wanadoo.fr")) {
-        // Orange et Wanadoo n'ont pas de lien de composition web direct, utiliser mailto
+        // Orange et Wanadoo n'ont pas de lien de compo web direct, utiliser mailto
         window.location.href = mailtoLink;
     } else if (email.endsWith("@protonmail.com") || email.endsWith("@protonmail.ch")) {
         // ProtonMail n'a pas de lien de composition web direct, utiliser mailto
