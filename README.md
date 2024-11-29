@@ -2,8 +2,8 @@
 
 <p>
 <p align="center">
-<a href="https://github.com/shwzr/ShynoBot/releases">
-<img alt="GitHub release" src="https://img.shields.io/github/release/shwzr/ShynoBot.svg">
+<a href="https://github.com/Macxzew/ShynoBot/releases">
+<img alt="GitHub release" src="https://img.shields.io/github/release/Macxzew/ShynoBot.svg">
 </a>
 </p>
 
@@ -13,14 +13,14 @@
 
 ##  👇 Downloads
 
-[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png" alt="Get it on GitHub" height="65">](https://github.com/shwzr/ShynoBot/releases/latest) 
+[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png" alt="Get it on GitHub" height="65">](https://github.com/Macxzew/ShynoBot/releases/latest)
 
 ##  📥 Installation
 
 - **For Windows:**
 
   I. Ensure that [`Python 3.9.4`](https://www.python.org/ftp/python/3.9.4/python-3.9.4-amd64.exe), [`Node.js 16.13.0`](https://nodejs.org/dist/v16.13.0/node-v16.13.0-x64.msi) are installed on your machine.
-  
+
   II. Open a terminal window and run the following commands:
   ```cmd
   cd ShynoBot/bot
@@ -28,29 +28,29 @@
   npm install -g npm@9.8.1
   npm install
   ```
-  
+
   III. Put your [Discord Bot token](https://discord.com/developers/applications) in `config.json`
 
 - **For Linux:**
 
   I. Ensure that `Python 3.11.2`, `Node.js 18.13.0` are installed on your machine.
-  
+
   II. Open a terminal and run the following commands:
   ```
   apt update
   apt install git python3 python3-pip curl
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-  
+
   export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
   nvm install 18.13.0
-  git clone https://github.com/shwzr/ShynoBot.git
+  git clone https://github.com/Macxzew/ShynoBot.git
   cd ShynoBot/bot
   pip3 install -r requirements.txt
   npm install
   ```
-  
+
   III. Put your [Discord Bot token](https://discord.com/developers/applications) in `config.json`
 
 ## 🛠️ Usage
@@ -71,9 +71,9 @@ Please keep both your activation code and password safe and secure. For any furt
 
 **Showzur**
 
-* SRV Discord: [Shynonime](https://discord.gg/UHy8mZsNh8)
-* Twitter: [@Showzur](https://twitter.com/Showzur)
-* Github: [@shwzr](https://github.com/shwzr)
+* SRV Discord: [Shynonime](https://discord.gg/B9PrK625xp)
+* Twitter: [@Macxzew](https://twitter.com/Macxzew)
+* Github: [@Macxzew](https://github.com/Macxzew)
 
 ## Show your support
 
