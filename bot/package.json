@@ -1,16 +1,19 @@
 {
-  "scripts": {
-    "start": "node start.js"
-  },
-  "dependencies": {
-    "libsodium-wrappers": "^0.7.11",
-    "@discordjs/voice": "^0.16.0",
-    "ytdl-core-discord": "^1.3.1",
-    "discord.js": "^13.3.1",
-    "youtube-sr": "^4.3.4",
-    "node-fetch": "^2.6.6",
-    "node-cron": "^3.0.2",
-    "moment": "^2.29.4",
-    "ytpl": "^2.3.0"
-  }
+	"name": "shyno",
+	"version": "1.3",
+	"description": "A Discord bot, ShynoBot",
+	"author": "Macxzew",
+	"main": "start.js",
+	"scripts": {
+	  "start": "node start.js"
+	},
+	"dependencies": {
+	  "adm-zip": "^0.5.10",
+	  "node-cron": "^3.0.2",
+	  "node-fetch": "^2.6.7",
+	  "moment": "^2.29.4"
+	},
+	"engines": {
+	  "node": ">=16.6.0"
+	}
 }
