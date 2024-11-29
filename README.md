@@ -9,7 +9,7 @@
 
 > **ShynoBot** is a robust and multifunctional Discord bot, designed for efficient moderation and enhanced user interaction. It stands shoulder to shoulder with popular bots such as Koya, MEE6, Carl, and Dyno. In addition to its powerful moderation features, ShynoBot offers a variety of interactive commands, customization options, and server administration functions.
 
-<img alt="Shyno" src="src/img/shyno-help.png" width="700"/>
+<img alt="Shyno" src="assets/shyno-help.png" width="700"/>
 
 ##  👇 Downloads
 
