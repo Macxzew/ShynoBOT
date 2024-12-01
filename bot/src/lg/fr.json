@@ -12,6 +12,8 @@
         "startBot_action5": "4. Quitter le programme.",
         "startBot_error1": "Option invalide.",
         "fetchID_error1": "Vous n'êtes pas connecté à Internet.",
+		"token_missing_message": "Erreur : Le token Discord n'a pas été renseigné dans config.json.",
+		"token_missing_instruction": "Veuillez ouvrir config.json et y ajouter le token de votre bot Discord avant de continuer.",
         "activateBot_action1": "Veuillez entrer la clé d'activation : ",
 		"activateBot_action2": "Veuillez entrer la passphrase : ",
         "activateBot_error1": "La clé d'activation est incorrecte, expirée ou déjà utilisée sur une autre machine ; veuillez régénérer votre clé sur https://shyno.glitch.me.",
