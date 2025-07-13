@@ -1,19 +1,19 @@
-<h1 align="center">ShynoBot <img src="https://static.wixstatic.com/media/665330_9054f68f25244f14848e3c98fbb061ef~mv2.gif" width="40px"></h1>
+<h1 align="center">ShynoBOT <img src="https://static.wixstatic.com/media/665330_9054f68f25244f14848e3c98fbb061ef~mv2.gif" width="40px"></h1>
 
 <p>
 <p align="center">
-<a href="https://github.com/Macxzew/ShynoBot/releases">
-<img alt="GitHub release" src="https://img.shields.io/github/release/Macxzew/ShynoBot.svg">
+<a href="https://github.com/Macxzew/ShynoBOT/releases">
+<img alt="GitHub release" src="https://img.shields.io/github/release/Macxzew/ShynoBOT.svg">
 </a>
 </p>
 
-> **ShynoBot** is a robust and multifunctional Discord bot, designed for efficient moderation and enhanced user interaction. It stands shoulder to shoulder with popular bots such as Koya, MEE6, Carl, and Dyno. In addition to its powerful moderation features, ShynoBot offers a variety of interactive commands, customization options, and server administration functions.
+> **ShynoBOT** is a robust and multifunctional Discord bot, designed for efficient moderation and enhanced user interaction. It stands shoulder to shoulder with popular bots such as Koya, MEE6, Carl, and Dyno. In addition to its powerful moderation features, ShynoBOT offers a variety of interactive commands, customization options, and server administration functions.
 
 <img alt="Shyno" src="assets/img/shyno-help.png" width="700"/>
 
 ##  👇 Downloads
 
-[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png" alt="Get it on GitHub" height="65">](https://github.com/Macxzew/ShynoBot/releases/latest)
+[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png" alt="Get it on GitHub" height="65">](https://github.com/Macxzew/ShynoBOT/releases/latest)
 
 ##  📥 Installation
 
@@ -23,7 +23,7 @@
 
   II. Open a terminal window and run the following commands:
   ```cmd
-  cd ShynoBot/bot
+  cd ShynoBOT/bot
   python.exe -m pip install --upgrade pip && pip install -r requirements.txt
   npm install -g npm@9.8.1
   npm install
@@ -45,8 +45,8 @@
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
   nvm install 18.13.0
-  git clone https://github.com/Macxzew/ShynoBot.git
-  cd ShynoBot/bot
+  git clone https://github.com/Macxzew/ShynoBOT.git
+  cd ShynoBOT/bot
   pip3 install -r requirements.txt
   npm install
   ```
@@ -55,7 +55,7 @@
 
 ## 🛠️ Usage
 
-After successfully installing the necessary dependencies and setting up the environment, you can start ShynoBot on both Linux and Windows by executing the following command:
+After successfully installing the necessary dependencies and setting up the environment, you can start ShynoBOT on both Linux and Windows by executing the following command:
 ```
 node start.js
 ```
