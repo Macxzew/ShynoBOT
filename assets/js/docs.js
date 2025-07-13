@@ -2,6 +2,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuLinks = document.querySelectorAll(".docs-menu a");
   const contentContainer = document.getElementById("docs-content-container");
 
+  // Utilitaire pour trouver le bon chemin, local ou Github Pages
+  function getMdPath(file) {
+    const pathParts = window.location.pathname.split('/');
+    // Ex: /ShynoBot/index.html => pathParts[1] === "ShynoBot"
+    if (location.hostname.endsWith('github.io') && pathParts[1]) {
+      return `/${pathParts[1]}/assets/md/${file}.md`;
+    }
+    return `assets/md/${file}.md`;
+  }
+
   // Configuration de `marked` pour gérer les blocs personnalisés
   marked.use({
     extensions: [
@@ -32,7 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fonction pour charger le contenu Markdown
   async function loadMarkdown(file) {
     try {
-      const response = await fetch(`docs/${file}.md`);
+      const mdPath = getMdPath(file);
+      const response = await fetch(mdPath);
       if (!response.ok) {
         throw new Error("Erreur lors du chargement du fichier Markdown.");
       }
