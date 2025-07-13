@@ -338,8 +338,17 @@ function copyToClipboard(text) {
 }
 
 // Load and Display Commands from commands.json
+function getCommandsJsonPath() {
+  // Récupère le "basename" du repo si hébergé sur Github Pages
+  const pathParts = window.location.pathname.split('/');
+  if (location.hostname.endsWith('github.io') && pathParts[1]) {
+    return `/${pathParts[1]}/assets/json/commands.json`;
+  }
+  return 'assets/json/commands.json';
+}
 function loadCommands() {
-  fetch("/assets/json/commands.json")
+  const jsonPath = getCommandsJsonPath();
+  fetch(jsonPath)
     .then((response) => response.json())
     .then((data) => initializeCommands(data.sections))
     .catch((error) => console.error("Failed to load commands.json:", error));
