@@ -1,0 +1,1077 @@
+/* Style Global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /* Import modern font */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #121212, #2a1b3d);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Fond animé avec des symboles */
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none; /* Pour que l'animation ne bloque pas les clics */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style des symboles */
+.symbol {
+  position: absolute;
+  font-size: calc(1rem + 2vw); /* Taille variable selon la taille de l'écran */
+  color: rgba(179, 157, 219, 0.15); /* Couleur respectant le thème du site */
+  animation: floatSymbol 10s ease-in-out infinite;
+  user-select: none;
+}
+
+/* Animation de flottement des symboles */
+@keyframes floatSymbol {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  25% {
+    transform: translateY(-10px) translateX(-10px) scale(1.1);
+  }
+  50% {
+    transform: translateY(10px) translateX(10px) scale(1.05);
+  }
+  75% {
+    transform: translateY(-5px) translateX(5px) scale(0.95);
+  }
+}
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 10px 5%;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo .white-text {
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #B39DDB;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #B39DDB;
+}
+
+.nav-links li a[href="docs.html"]:hover {
+  color: #ffcc80; /* Couleur différente au survol */
+  text-decoration: underline; /* Souligne le texte au survol */
+}
+
+/* Login Button */
+.login {
+  margin-left: auto;
+}
+
+.login a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 4px 15px;
+  border: 2px solid #B39DDB;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.login a:hover {
+  color: #121212;
+  border-color: #E0E0E9;
+}
+.login a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #B39DDB, #E0E0E9);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.login a:hover::before {
+  transform: scaleX(1);
+  border-radius: 8px;
+}
+
+/* Style global pour la section #user-info */
+/* Carte d'information */
+.info-card {
+  max-width: 400px;
+  padding: 30px;
+  background: linear-gradient(135deg, #766391, #3e2b55);
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  text-align: center;
+  margin: auto;
+}
+
+/* Avatar */
+
+.close.disabled {
+  pointer-events: none; /* Désactive les clics */
+  cursor: not-allowed; /* Change le curseur */
+  opacity: 0.5; /* Rend le bouton visuellement désactivé */
+}
+
+.close.enabled {
+  pointer-events: auto; /* Réactive les clics */
+  cursor: pointer; /* Indique que le bouton est cliquable */
+  opacity: 1; /* Apparence normale */
+}
+
+#doubleModal {
+  display: none; /* Masqué par défaut */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#doubleModal .modal-content {
+  background-color: #2a1b3d;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.info-avatar img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid #b39ddb;
+  margin-bottom: 15px;
+}
+
+/* En-tête */
+.info-header h2 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+.info-header .info-subtitle {
+  color: #d0d0d0;
+  font-size: 1rem;
+}
+
+/* Détails */
+.info-details {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.info-row {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column; /* Aligner en colonne */
+}
+
+.info-label {
+  font-weight: bold;
+  color: #b39ddb;
+  margin-bottom: 5px;
+}
+
+.info-value {
+  background: #2a1b3d;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-family: monospace;
+  color: #b39ddb;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.info-value:hover {
+  background-color: #3c2952;
+  color: #e2ccff;
+}
+
+/* Bouton Copier */
+.copy-button {
+  margin-left: 10px;
+  background-color: #6c558c;
+  color: #ffffff;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #b39ddb;
+}
+
+.regenerate-button {
+  margin-left: 10px;
+  background-color: #5c4a7f;
+  color: #ffffff;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.regenerate-button:hover {
+  background-color: #b39ddb;
+}
+
+/* Bouton Déconnexion */
+.info-actions {
+  margin-top: 20px;
+}
+
+.info-actions button {
+    background-color: #6c558c;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 5px;
+}
+
+.info-actions button:hover {
+    background-color: #806c9d;
+    color: #ffffff;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+  width: 30px;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animation for menu open state */
+.menu-icon.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.section-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Définir l'animation bounce */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Position initiale */
+  }
+  50% {
+    transform: translateY(-10px); /* Déplace légèrement vers le haut */
+  }
+}
+
+/* Appliquer l'animation au logo */
+.bot-logo {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: bounce 3s ease-in-out infinite; /* Animation rebond en boucle */
+}
+
+.bot-logo:hover {
+  transform: scale(1.1); /* Augmentation de taille au survol */
+  box-shadow: 0 8px 20px rgba(179, 157, 219, 0.8);
+}
+
+.highlight {
+  color: #B39DDB;
+}
+
+.hero-text {
+  text-align: center;
+  color: #E0E0E9;
+  font-size: calc(1rem + 0.5vw);
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+/* Initialement masquée */
+.section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Transition en fondu */
+}
+/* Affiche la section active avec transition */
+.section.active {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in; /* Animation de fondu en entrée */
+}
+/* Animation de fondu en entrée */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Effet de déplacement vers le haut */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 88%;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature-logo {
+  width: 50px; /* Taille ajustable selon le design */
+  height: 50px;
+  margin-bottom: 10px; /* Espace entre le logo et le titre */
+}
+
+/* Définir l'animation pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Définir l'animation pulse */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Définir l'animation pulse avec un effet d'échelle plus important */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Augmentation plus marquée */
+  }
+}
+
+/* Appliquer l'animation pulse et la transition */
+.card {
+  background: #2a1b3d;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: center;
+  animation: pulse 5s ease-in-out infinite; /* Animation avec une mise à l'échelle plus visible */
+  transition: transform 0.4s ease; /* Transition pour le hover */
+}
+/* Délai d'animation pour chaque carte pour un effet décalé */
+.card:nth-child(4) {
+  animation-delay: 0s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.card:nth-child(1) {
+  animation-delay: 1s;
+}
+.card:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.card p {
+  font-size: 1rem; /* Taille uniforme pour toutes les descriptions */
+  line-height: 1.5; /* Espacement uniforme entre les lignes */
+  max-height: 4.5rem; /* Limite la hauteur de chaque description */
+  overflow: hidden; /* Coupe le texte excédentaire si nécessaire */
+  text-align: center; /* Centrer le texte si nécessaire */
+}
+
+.card h3 {
+  color: #B39DDB;
+}
+
+.card svg {
+  transition: fill 0.3s ease;
+}
+
+.card:hover svg {
+  fill: white;
+}
+
+
+/* Command Section Layout */
+#command-details {
+  max-height: 400px; /* Définissez une hauteur maximale adaptée */
+  overflow-y: auto; /* Active le défilement vertical */
+  padding-right: 10px; /* Espace pour éviter que le texte ne soit masqué par la barre de défilement */
+}
+
+#command-section {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: flex-start; /* Align the content to the top */
+  opacity: 85%;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #322740;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Style de la scrollbar pour la section des commandes et la barre latérale */
+#command-details, .sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #6c558c #2a1b3d; /* Personnalisation de la couleur pour Firefox */
+}
+
+/* Pour Chrome, Edge, Safari */
+#command-details::-webkit-scrollbar, .sidebar::-webkit-scrollbar {
+  width: 8px; /* Largeur de la scrollbar */
+}
+
+#command-details::-webkit-scrollbar-track, .sidebar::-webkit-scrollbar-track {
+  background: #2a1b3d; /* Couleur de l'arrière-plan de la scrollbar */
+  border-radius: 10px; /* Arrondir les bords */
+}
+
+#command-details::-webkit-scrollbar-thumb, .sidebar::-webkit-scrollbar-thumb {
+  background-color: #6c558c; /* Couleur de la "poignée" de la scrollbar */
+  border-radius: 10px;
+  border: 2px solid #2a1b3d; /* Crée un espace entre la poignée et le track */
+}
+
+#command-details::-webkit-scrollbar-thumb:hover, .sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #b39ddb; /* Couleur de la poignée au survol */
+}
+
+.content {
+  min-width: 600px; /* Set a max-width to prevent the content from stretching too wide */
+  padding: 20px;
+  background-color: #30263f;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: 1px solid #333333;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  color: #b39ddb;
+}
+
+/* Command Item Styling */
+.command-item {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 15px 0;
+  border-bottom: 1px solid #444444; /* Light border for separation */
+}
+
+.command-item:last-child {
+  border-bottom: none; /* Remove border from the last command item */
+}
+
+.command-title {
+  font-size: 1.2em;
+  color: #b39ddb;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.command-description {
+  margin-top: 5px;
+  color: #e0e0e0;
+}
+
+.usage {
+  margin-left: 20px;
+  font-size: 0.9em;
+  color: #cccccc;
+}
+
+.usage div strong {
+    background: hsla(225, calc(1 * 85.6%), 67.7%, .3);
+    border-radius: 4px;
+    color: hsl(236, calc(1 * 83.3%), 92.9%);
+    padding: 0.2px 2px;
+}
+
+/* Responsive Design for Command Section */
+@media (max-width: 885px) {
+  #command-section {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+
+
+/* Profile Card for Contact */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%; /* Assurez-vous qu'il occupe toute la largeur */
+}
+
+.discord-profile-card {
+  width: 100%;
+  max-width: 350px; /* Limite la largeur maximale */
+  background: #30263f;
+  opacity: 80%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.profile-banner {
+    height: 70px;
+    background: #6c558c;
+}
+
+.profile-content {
+  padding: 20px;
+  position: relative;
+}
+
+.profile-avatar {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border: 4px solid #2f3136;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info {
+  margin-top: 40px;
+}
+
+.username {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.user-tag {
+  color: #b9bbbe;
+  font-size: 0.9rem;
+}
+
+.status {
+  color: #43b581;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.profile-actions button {
+    background: #6c558c;
+    color: #ffffff;
+    font-size: 0.9rem;
+    padding: 4px 6px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #896cb200;
+}
+
+.profile-actions button:hover {
+  transform: scale(1.05); /* Légère augmentation de taille au survol */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Ombre renforcée */
+}
+
+.profile-actions button:active {
+  transform: scale(0.98); /* Légère réduction au clic pour un effet pressé */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Section de Connexion */
+#login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #2a1b3d;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+  color: #ffffff;
+  opacity: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Titre de la section de Connexion */
+#login .section-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #b39ddb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Formulaire de Connexion */
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form label {
+  font-size: 1rem;
+  color: #b39ddb;
+}
+
+.login-form input {
+  padding: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #30263f;
+  border: 1px solid #6c558c;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #b39ddb;
+}
+
+/* Bouton de Connexion */
+.login-form button {
+  padding: 10px;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: #6c558c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #b39ddb;
+}
+
+.login-form button:active {
+  transform: scale(0.98); /* Légère réduction au clic pour un effet pressé */
+}
+
+#stripeModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#stripeModal .modal-content {
+  background-color: #2a1b3d;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#stripeModal h2 {
+  color: #b39ddb;
+}
+
+#stripeModal #payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#stripeModal #submit-payment {
+  padding: 10px;
+  background-color: #6c558c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#stripeModal #submit-payment:hover {
+  background-color: #b39ddb;
+}
+
+
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer a {
+  color: #B39DDB;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Masqué par défaut */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #2a1b3d;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #B39DDB;
+}
+
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #B39DDB;
+  text-decoration: none;
+}
+
+
+/* Responsive */
+@media (max-width: 885px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .logo, .nav-links, .login {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .login {
+    margin-top: 9px;
+  }
+  
+  .login a {
+      text-decoration: none;
+      padding: 7px 15px;
+      margin: 9px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .bot-logo {
+    width: 30%;
+    height: 30%;
+  }
+
+  .hero-text h1 {
+    font-size: calc(1.5rem + 1.5vw); /* Réduisez la taille du titre */
+  }
+  
+  .hero-text p {
+    font-size: calc(1rem + 1vw); /* Réduisez la taille de la description */
+  }
+  
+  .footer {
+    font-size: calc(0.6rem + 0.5vw); /* Plus petite taille pour les petits écrans */
+  }
+
+  .footer a {
+    font-size: calc(0.8rem + 0.5vw); /* Ajuste aussi la taille des liens */
+  }
+
+  .hero {
+    padding: 30px 20px;
+  }
+  
+  .hero-text {
+    font-size: calc(1.5rem + 1vw); /* Ajuste la taille du texte de la section Hero */
+  }
+
+  /* Command Section Responsive */
+  #command-section {
+    display: flex;
+    flex-direction: column; /* Stack sidebar and content vertically */
+    align-items: center; /* Center content */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .content {
+    min-width: 400px;
+    max-width: 400px;
+  }
+
+  /* Contact Section Responsive */
+  #contact {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .discord-profile-card {
+    width: 100%; /* Occupies the full width of the container */
+    max-width: 300px; /* Sets a maximum width for responsive display */
+    background: #30263f;
+    opacity: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 auto; /* Centers the card */
+  }
+
+  .profile-content {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .profile-actions {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Add spacing between buttons */
+  }
+  
+  
+    #login {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .login-form button {
+    font-size: 1rem;
+  }
+}

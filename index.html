@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link rel="icon" type="image/png" href="assets/img/profile.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>ShynoBot</title>
+
+</head>
+<body>
+  <div class="background-animation"></div>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="logo">
+      <a class="nav-link" onclick="showSectionWithTransition('hero')" style="cursor: pointer;">Shyno<span class="white-text">Bot</span></a>
+    </div>
+    <div class="menu-icon" onclick="toggleNav()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link">Accueil</a></li>
+      <li><a href="#features" class="nav-link">Fonctionnalités</a></li>
+      <li><a href="#commands" class="nav-link">Commandes</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="docs.html" class="nav-link">Documentation</a></li>
+    </ul>
+    <div class="login"><a href="#login" onclick="showSectionWithTransition('login'); return false;">Login</a></div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero section active" id="hero">
+    <div class="hero-content">
+      <img src="assets/img/profile.png" alt="ShynoBot Logo" class="bot-logo">
+      <div class="hero-text">
+        <h1><span class="highlight">Shyno</span>Bot</h1>
+        <p><span class="highlight">Shyno</span> Le bot Discord complet pour gérer, divertir et développer votre communauté.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div id="features" class="section">
+    <h2 class="section-title">Fonctionnalités</h2>
+    <div class="feature-cards">
+      <!-- Carte de Modération -->
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" width="50" height="50" fill="#b39ddb"><path d="M413.5 237.5c-28.2 4.8-58.2-3.6-80-25.4l-38.1-38.1C280.4 159 272 138.8 272 117.6l0-12.1L192.3 62c-5.3-2.9-8.6-8.6-8.3-14.7s3.9-11.5 9.5-14l47.2-21C259.1 4.2 279 0 299.2 0l18.1 0c36.7 0 72 14 98.7 39.1l44.6 42c24.2 22.8 33.2 55.7 26.6 86L503 183l8-8c9.4-9.4 24.6-9.4 33.9 0l24 24c9.4 9.4 9.4 24.6 0 33.9l-88 88c-9.4 9.4-24.6 9.4-33.9 0l-24-24c-9.4-9.4-9.4-24.6 0-33.9l8-8-17.5-17.5zM27.4 377.1L260.9 182.6c3.5 4.9 7.5 9.6 11.8 14l38.1 38.1c6 6 12.4 11.2 19.2 15.7L134.9 484.6c-14.5 17.4-36 27.4-58.6 27.4C34.1 512 0 477.8 0 435.7c0-22.6 10.1-44.1 27.4-58.6z"/></svg>
+        <h3>Modération</h3>
+        <p>Protégez et supervisez votre communauté avec des outils de modération avancés.</p>
+      </div>
+      <!-- Carte d'Engagement Communautaire -->
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 576 512" width="50" height="50" fill="#b39ddb"><path d="M163.9 136.9c-29.4-29.8-29.4-78.2 0-108s77-29.8 106.4 0l17.7 18 17.7-18c29.4-29.8 77-29.8 106.4 0s29.4 78.2 0 108L310.5 240.1c-6.2 6.3-14.3 9.4-22.5 9.4s-16.3-3.1-22.5-9.4L163.9 136.9zM568.2 336.3c13.1 17.8 9.3 42.8-8.5 55.9L433.1 485.5c-23.4 17.2-51.6 26.5-80.7 26.5L192 512 32 512c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l36.8 0 44.9-36c22.7-18.2 50.9-28 80-28l78.3 0 16 0 64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0-16 0c-8.8 0-16 7.2-16 16s7.2 16 16 16l120.6 0 119.7-88.2c17.8-13.1 42.8-9.3 55.9 8.5zM193.6 384c0 0 0 0 0 0l-.9 0c.3 0 .6 0 .9 0z"/></svg>
+        <h3>Engagement</h3>
+        <p>Favorisez l'interaction avec des jeux et événements.</p>
+      </div>
+      <!-- Carte de Configuration du Serveur -->
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" width="50" height="50" fill="#b39ddb"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></svg>
+        <h3>Configuration</h3>
+        <p>Ajustez les paramètres pour une expérience personnalisée.</p>
+      </div>
+      <!-- Carte d'Outils et Utilitaires -->
+      <div class="card">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" width="50" height="50" fill="#b39ddb"><path d="M176 88l0 40 160 0 0-40c0-4.4-3.6-8-8-8L184 80c-4.4 0-8 3.6-8 8zm-48 40l0-40c0-30.9 25.1-56 56-56l144 0c30.9 0 56 25.1 56 56l0 40 28.1 0c12.7 0 24.9 5.1 33.9 14.1l51.9 51.9c9 9 14.1 21.2 14.1 33.9l0 92.1-128 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32-128 0 0-32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 32L0 320l0-92.1c0-12.7 5.1-24.9 14.1-33.9l51.9-51.9c9-9 21.2-14.1 33.9-14.1l28.1 0zM0 416l0-64 128 0c0 17.7 14.3 32 32 32s32-14.3 32-32l128 0c0 17.7 14.3 32 32 32s32-14.3 32-32l128 0 0 64c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64z"/></svg>
+        <h3>Outils</h3>
+        <p>Optimisez la gestion et la sécurité avec des outils puissants.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Commandes Section -->
+  <div id="commands" class="section">
+    <h2 class="section-title">Commandes</h2>
+    <div id="command-section">
+      <div class="sidebar">
+        <ul id="command-categories"></ul>
+      </div>
+      <div class="content">
+        <div id="command-details"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Contact Section -->
+  <div id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <div class="discord-profile-card">
+      <div class="profile-banner"></div>
+      <div class="profile-content">
+        <div class="profile-avatar">
+          <img src="assets/img/avatar.jpg" alt="Avatar">
+        </div>
+        <div class="profile-info">
+          <h3 class="username">Macxzew<span class="user-tag">#0001</span></h3>
+          <p class="status">En ligne</p>
+        </div>
+        <div class="profile-actions">
+          <button onclick="copyToClipboard('macxzew@proton.me')">
+            <iconify-icon icon="material-symbols:mail-outline"></iconify-icon> Email
+          </button>
+          <button onclick="window.open('https://discordapp.com/users/590292463542075413', '_blank')">
+            <iconify-icon icon="simple-icons:discord"></iconify-icon> Discord
+          </button>
+          <button onclick="window.open('https://github.com/Macxzew', '_blank')">
+            <iconify-icon icon="simple-icons:github"></iconify-icon> GitHub
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Login Section -->
+  <div id="login" class="section">
+    <h2 class="section-title">Connexion</h2>
+    <form class="login-form">
+      <label for="activationKey">Clé d'activation</label>
+      <input type="text" id="activationKey" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+
+      <label for="passphrase">Passphrase</label>
+      <input type="password" id="passphrase" placeholder="Entrez votre passphrase" required>
+
+      <button type="submit">Se connecter</button>
+      <button id="buy-key-button" type="button">Acheter une clé d'activation</button>
+    </form>
+  </div>
+  <!-- Section Utilisateur Connecté -->
+  <div id="user-info" class="section">
+    <div class="info-card">
+      <!-- Image ronde du bot -->
+      <div class="info-avatar">
+        <img src="https://cdn.glitch.global/2a3d831c-cba9-43b3-aa31-791655232186/profile.png?v=1730942690981" alt="Bot Logo">
+      </div>
+      <div class="info-header">
+        <h2>Connecté avec succès !</h2>
+        <p class="info-subtitle">Voici vos informations de connexion :</p>
+      </div>
+      <div class="info-details">
+        <div class="info-row">
+          <p class="info-label">Clé d'activation :</p>
+          <div class="info-value">
+            <span id="display-activationKey"></span>
+            <button class="copy-button" onclick="copyToClipboard(document.getElementById('display-activationKey').textContent)">
+              Copier
+            </button>
+            <button class="regenerate-button" onclick="regenerateActivationKey()">Régénérer</button>
+          </div>
+        </div>
+        <div class="info-row">
+          <p class="info-label">Passphrase :</p>
+          <div class="info-value">
+            <span id="display-passphrase"></span>
+            <button class="copy-button" onclick="copyToClipboard(document.getElementById('display-passphrase').textContent)">
+              Copier
+            </button>
+          </div>
+        </div>
+        <div class="info-row">
+          <p class="info-label">Date d'expiration :</p>
+          <div class="info-value">
+            <span id="display-expirationDate"></span>
+          </div>
+        </div>
+      </div>
+      <div class="info-actions">
+        <button id="download-info-button">Télécharger les informations et Déconnexion</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Stripe -->
+  <div id="stripeModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('stripeModal')">&times;</span>
+        <h2>Acheter une clé d'activation</h2>
+        <p>Payez <strong>10 €</strong> pour générer une nouvelle clé d'activation valable durant <strong>3 mois</strong>. Votre carte ne sera pas enregistrée.</p>
+        <form id="payment-form">
+          <div id="card-element" style="margin-bottom: 15px; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+            <!-- Stripe Card Element sera inséré ici -->
+          </div>
+          <button type="submit" id="submit-payment" style="background-color: #6c558c; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Procéder au paiement de 10 €
+          </button>
+          <div id="payment-status" style="margin-top: 10px; color: white;"></div>
+          <div id="loader" style="display: none; text-align: center; margin-top: 10px;">
+            <img src="https://cdn.glitch.global/2a3d831c-cba9-43b3-aa31-791655232186/loader.gif?v=1732367591938" alt="Chargement..." style="width: 50px; height: 50px;">
+          </div>
+        </form>
+      </div>
+  </div>
+
+  <div id="doubleModal" class="modal">
+    <div class="modal-content">
+      <!-- Bouton de fermeture désactivé initialement -->
+      <span
+        class="close disabled"
+        onclick="if (!canCloseDoubleModal) { alert('Veuillez télécharger les informations avant de fermer ce modal.'); } else { closeModal('doubleModal'); }"
+      >
+        &times;
+      </span>
+      <h2>Informations d'activation</h2>
+      <div class="info-row">
+        <p class="info-label">Clé d'activation :</p>
+        <div class="info-value">
+          <span id="modal-activationKey">XXXXX-XXXXX-XXXXX-XXXXX</span>
+          <button class="copy-button" onclick="copyToClipboard(document.getElementById('modal-activationKey').textContent)">
+            Copier
+          </button>
+        </div>
+      </div>
+      <div class="info-row">
+        <p class="info-label">Passphrase :</p>
+        <div class="info-value">
+          <span id="modal-passphrase">XXXXX</span>
+          <button class="copy-button" onclick="copyToClipboard(document.getElementById('modal-passphrase').textContent)">
+            Copier
+          </button>
+        </div>
+      </div>
+      <div class="info-row">
+        <p class="info-label">Date d'expiration :</p>
+        <div class="info-value">
+          <span id="modal-expirationDate">JJ/MM/AAAA</span>
+        </div>
+      </div>
+      <div class="info-actions">
+        <button onclick="downloadTxtFile()">Télécharger les informations</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>ShynoBot © 2024. Tous droits réservés.</p>
+    <div>
+      <a href="#" onclick="openModal('termsModal')">Conditions d'utilisation</a>
+      <a href="#" onclick="openModal('privacyModal')">Politique de confidentialité</a>
+      <a href="#" onclick="openModal('cookiesModal')">Cookies</a>
+      <a href="#" onclick="openModal('gdprModal')">RGPD</a>
+    </div>
+  </footer>
+
+
+  <!-- Modals -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('termsModal')">&times;</span>
+      <h2>Conditions d'utilisation</h2>
+      <p>Bienvenue sur ShynoBot ! En utilisant notre site et nos services, vous acceptez les conditions suivantes :</p>
+      <ul>
+        <li>L'accès à ShynoBot nécessite un abonnement actif et valide.</li>
+        <li>Une clé d'activation et une passphrase unique sont générées après paiement. Ces informations doivent être conservées de manière sécurisée.</li>
+        <li>Vous n'êtes pas autorisé à modifier, redistribuer ou vendre le code ou les services liés à ShynoBot. L'utilisation est strictement personnelle.</li>
+        <li>Vous êtes responsable de configurer votre propre bot Discord en fournissant un token valide et de maintenir l'environnement requis pour l'exécution du bot (Node.js, Python, etc.).</li>
+        <li>Les services fournis par ShynoBot sont soumis à des limites raisonnables d'utilisation. Tout abus peut entraîner la résiliation de votre accès sans remboursement.</li>
+        <li>ShynoBot et ses développeurs déclinent toute responsabilité pour les conséquences d'une mauvaise utilisation ou d'une mauvaise configuration du bot.</li>
+      </ul>
+    </div>
+  </div>
+  <div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+      <h2>Politique de confidentialité</h2>
+      <p>Nous respectons votre vie privée et appliquons les principes suivants :</p>
+      <ul>
+        <li>Les données collectées, comme votre clé d'activation et votre passphrase, sont utilisées uniquement pour valider votre accès au service ShynoBot.</li>
+        <li>Nous ne partageons pas vos informations avec des tiers, sauf si cela est requis pour traiter vos paiements (via Stripe) ou pour des raisons légales.</li>
+        <li>Aucune donnée de navigation ou de suivi n'est collectée sur ce site.</li>
+        <li>Vous pouvez à tout moment demander la suppression de vos données personnelles en nous contactant à l'adresse fournie dans la section "Contact".</li>
+      </ul>
+    </div>
+  </div>
+  <div id="cookiesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('cookiesModal')">&times;</span>
+      <h2>Cookies</h2>
+      <p>Ce site n'utilise pas de cookies ou de technologies similaires pour collecter des informations personnelles ou suivre votre activité.</p>
+      <p>Tout suivi des paiements et de l'activité liée au bot se fait via l'API sécurisée et ne dépend pas de cookies.</p>
+    </div>
+  </div>
+  <div id="gdprModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('gdprModal')">&times;</span>
+      <h2>Conformité RGPD</h2>
+      <p>Ce site respecte le Règlement Général sur la Protection des Données (RGPD). Aucun stockage de données personnelles n'est effectué sur nos serveurs.</p>
+      <ul>
+        <li>Les clés d'activation et passphrases sont traitées uniquement de manière temporaire pour valider votre accès.</li>
+        <li>Aucune donnée sensible ou identifiable n'est conservée après traitement.</li>
+        <li>Pour toute question ou assistance, vous pouvez nous contacter à <strong>macxzew@proton.me</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- Include External JS -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

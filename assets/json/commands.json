@@ -1,0 +1,311 @@
+{
+  "sections": {
+    "💻 Generales": [
+      {
+        "command": "/help",
+        "description": "🆘 Afficher la liste des commandes du bot.",
+        "usage": {
+        },
+        "details": ""
+      },
+      {
+        "command": "/info",
+        "description": "❓ Afficher les informations sur le bot.",
+        "usage": {
+        },
+        "details": ""
+      }
+    ],
+    "🛡 Moderation": [
+      {
+        "command": "/ban",
+        "description": "🔨 Bannir un membre du serveur.",
+        "usage": {
+          "/ban [@member/userid]" : "Bannir un membre.",
+          "/ban [@member/userid] [reason]" : "Bannir un membre avec raison."
+        },
+        "details": ""
+      },
+      {
+        "command": "/unban",
+        "description": "🩹 Débannir un utilisateur du serveur.",
+        "usage": {
+          "/unban [userid]" : "Débannir un utilisateur.",
+          "/unban [userid] [reason]" : "Débannir un utilisateur avec raison."
+        },
+        "details": ""
+      },
+      {
+        "command": "/kick",
+        "description": "👊 Expulser un membre du serveur.",
+        "usage": {
+          "/kick [userid]" : "Expulser un membre.",
+          "/kick [userid] [reason]" : "Expulser un membre avec raison."
+        },
+        "details": ""
+      },
+      {
+        "command": "/mute",
+        "description": "🔇 Rendre muet un membre du serveur.",
+        "usage": {
+          "/mute [@member]" : "Rendre muet un membre.",
+          "/mute [@member] [reason]" : "Rendre muet un membre avec raison."
+        },
+        "details": ""
+      },
+      {
+        "command": "/unmute",
+        "description": "🔊 Rétablir la parole d'un membre du serveur.",
+        "usage": {
+          "/unmute [[@member]" : "Rétablir la parole d'un membre.",
+          "/unmute [@member] [reason]" : "Rétablir la parole d'un membre avec raison."
+        },
+        "details": ""
+      },
+      {
+        "command": "/lock",
+        "description": "🔒 Bloquer les messages du salon.",
+        "usage": {
+        },
+        "details": ""
+      },
+      {
+        "command": "/unlock",
+        "description": "🔓 Débloquer les messages du salon.",
+        "usage": {
+        },
+        "details": ""
+      },
+      {
+        "command": "/msg",
+        "description": "📨 Envoyer un message.",
+        "usage": {
+          "/msg [message]" : "Envoyer un message dans le salon actuel.",
+          "/msg [message] [@member]" : "Envoyer un message à un membre.",
+          "/msg [message] [#channel]" : "Envoyer un message dans un salon spécifique."
+        },
+        "details": ""
+      },
+      {
+        "command": "/msgembed",
+        "description": "📨 Envoyer un message décoratif.",
+        "usage": {
+          "/msgembed [title] [...]" : "Envoyer un message décoratif dans le salon.",
+          "/msgembed [title] [...] [@member]" : "Envoyer un message décoratif à un membre.",
+          "/msgembed [title] [...] [#channel]" : "Envoyer un message décoratif dans un salon spécifique."
+        },
+        "details": ""
+      },
+      {
+        "command": "/webhookmsg",
+        "description": "📨 Envoyer un message webhook.",
+        "usage": {
+          "/webhookmsg [url-webhook] [message]" : "Envoyer un message webhook dans le salon."
+        },
+        "details": ""
+      },
+      {
+        "command": "/webhookmsgembed",
+        "description": "📨 Envoyer un message webhook décoratif.",
+        "usage": {
+          "/webhookmsgembed [url-webhook] [title] [...]" : "Envoyer un message webhook décoratif dans le salon."
+        },
+        "details": ""
+      },
+      {
+        "command": "/purge",
+        "description": "🧹 Nettoyer tous les messages du salon.",
+        "usage": {
+        },
+        "details": ""
+      },
+      {
+        "command": "/giveaway",
+        "description": "🏆 Organiser un giveaway.",
+        "usage": {
+          "/giveaway [duration] [winners]" : "Organiser un giveaway avec durée (minutes) et nb de gagnants."
+        },
+        "details": ""
+      }
+    ],
+    "🌟 Administration": [
+      {
+        "command": "/setlanguage",
+        "description": "🌍 Changer la langue du bot.",
+        "usage": {
+          "/setlanguage [lang]" : "Changer la langue du bot en Français [fr] ou en Anglais [en]."
+        },
+        "details": ""
+      },
+      {
+        "command": "/setcolor",
+        "description": "🎨 Changer la couleur principale du bot.",
+        "usage": {
+          "/setcolor [color]" : "Changer la couleur principale du bot."
+        },
+        "details": ""
+      },
+      {
+        "command": "/setwelcome",
+        "description": "👋 Définir le salon de bienvenue.",
+        "usage": {
+        },
+        "details": ""
+      },
+      {
+        "command": "/setlogs",
+        "description": "📰 Définir le salon des journeaux d'évênements.",
+        "usage": {
+        },
+        "details": ""
+      },
+      {
+        "command": "/setrole ",
+        "description": "👥 Attribuer un rôle à un membre.",
+        "usage": {
+          "/setrole [@member/userid] [@role]" : "Attribuer un rôle à un membre."
+        },
+        "details": ""
+      },
+      {
+        "command": "/autorole ",
+        "description": "🔄 Configurer un système d'auto-rôle.",
+        "usage": {
+          "/autorole [action] [@role] [...]" : "Attribuer un rôle automatiquement selon un critère."
+        },
+        "details": ""
+      }
+    ],
+    "🎁 Bonus": [
+      {
+        "command": "$profil",
+        "description": "👤 Afficher le profile d'un membre",
+        "usage": {
+          "$profil -a" : "Activer la commande $profil sur le salon.",
+          "$profil -d" : "Désactiver la commande $profil sur le salon.",
+          "$profil [@member/userid]" : "Afficher le profile d'un membre."
+        },
+        "details": ""
+      },
+      {
+        "command": "$anime",
+        "description": "🎥 Afficher une brève description d'un animé.",
+        "usage": {
+          "$anime -a" : "Activer la commande $anime sur le salon.",
+          "$anime -d" : "Désactiver la commande $anime sur le salon.",
+          "$anime [anime]" : "Afficher une brève description d'un animé."
+        },
+        "details": ""
+      },
+      {
+        "command": "$manga",
+        "description": "📙 Afficher une brève description d'un manga.",
+        "usage": {
+          "$manga -a" : "Activer la commande $manga sur le salon.",
+          "$manga -d" : "Désactiver la commande $manga sur le salon.",
+          "$manga [manga]" : "Afficher une brève description d'un manga."
+        },
+        "details": ""
+      },
+      {
+        "command": "$wallpaper",
+        "description": "🖼 Rechercher un fond d'écran.",
+        "usage": {
+          "$wallpaper -a" : "Activer la commande $wallpaper sur le salon.",
+          "$wallpaper -d" : "Désactiver la commande $wallpaper sur le salon.",
+          "$wallpaper" : "Rechercher un fond d'écran aléatoire.",
+          "$wallpaper [search]" : "Rechercher un fond d'écran spécifique."
+        },
+        "details": ""
+      },
+      {
+        "command": "/imgen",
+        "description": "🖼 Générer une image.",
+        "usage": {
+          "/imgen [prompt]" : "Générer une image souhaitée."
+        },
+        "details": ""
+      },
+      {
+        "command": "/pics_v1",
+        "description": "🏖 Chercher une image par type (v1).",
+        "usage": {
+          "/pics_v1 [genre]" : "Chercher une image par type."
+        },
+        "details": ""
+      },
+      {
+        "command": "/pics_v2",
+        "description": "🏞 Chercher une image par type (v2).",
+        "usage": {
+          "/pics_v2 [genre]" : "Chercher une image par type."
+        },
+        "details": ""
+      },
+      {
+        "command": "/passgen",
+        "description": "🔐 Générer un mot de passe aléatoire.",
+        "usage": {
+          "/passgen [...]" : "Générer un mot de passe aléatoire."
+        },
+        "details": ""
+      },
+      {
+        "command": "/translate",
+        "description": "🌐 Traduire un texte.",
+        "usage": {
+          "/translate [text] [lang]" : "Traduire un texte."
+        },
+        "details": ""
+      },
+      {
+        "command": "/conv",
+        "description": "🔀 Convertir une valeur à un autre format.",
+        "usage": {
+          "/conv [input_format] [input] [output_format]" : "Convertir une valeur à un autre format."
+        },
+        "details": ""
+      },
+      {
+        "command": "/crypt",
+        "description": "🔏 Encrypter un texte.",
+        "usage": {
+          "/crypt [mode] [text] [key]" : "Encrypter un texte."
+        },
+        "details": ""
+      },
+      {
+        "command": "/qrgen",
+        "description": "🔳 Générer un QR Code.",
+        "usage": {
+          "/qrgen [text]" : "Générer un QR Code."
+        },
+        "details": ""
+      },
+      {
+        "command": "/urlshort",
+        "description": "🔗 Raccourcir une URL.",
+        "usage": {
+          "/urlshort [url] [api]" : "Raccourcir une URL."
+        },
+        "details": ""
+      },
+      {
+        "command": "/resprofil",
+        "description": "🐦 Associer un réseau à son profile.",
+        "usage": {
+          "/resprofil [action] [platform] [pseudo]" : "Associer un réseau à son profile."
+        },
+        "details": ""
+      },
+      {
+        "command": "/die",
+        "description": "🎲 Lancer un dé.",
+        "usage": {
+          "/die [faces]" : "Lancer un dé avec le nombre de faces choisi."
+        },
+        "details": ""
+      }
+    ]
+  }
+}

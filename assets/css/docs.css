@@ -1,0 +1,346 @@
+/* Style Global */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); /* Import modern font */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #121212, #2a1b3d);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/* Conteneur global */
+.docs-container {
+  display: flex;
+  height: 100vh;
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Barre latérale */
+.docs-sidebar {
+  width: 250px;
+  background-color: #2a1b3d;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.docs-title {
+  color: #b39ddb;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.docs-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.docs-menu > li {
+  margin-bottom: 10px;
+}
+
+.docs-menu > li > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 8px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.docs-menu > li > a:hover,
+.docs-menu > li > a.docs-active {
+  background-color: #b39ddb;
+  color: #121212;
+}
+
+.docs-submenu {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 15px;
+}
+
+.docs-submenu > li > a {
+  color: #b39ddb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 5px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.docs-submenu > li > a:hover {
+  color: #ffcc80;
+}
+
+/* Contenu principal */
+.docs-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  background-color: #1c1c1f;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  border-left: 1px solid #2a1b3d;
+}
+
+.docs-content h1 {
+  color: #b39ddb;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.docs-content h2 {
+  color: #ffcc80;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+.docs-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.docs-content ul {
+  margin: 10px 0;
+  padding-left: 20px;
+  color: #e0e0e0;
+}
+
+.docs-content li {
+  margin-bottom: 5px;
+}
+
+.docs-content pre {
+  background-color: #2a1b3d;
+  padding: 15px;
+  border-radius: 8px;
+  color: #e0e0e0;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+}
+
+.docs-content code {
+  background-color: #2a1b3d;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #ffcc80;
+  font-family: 'Courier New', monospace;
+}
+
+/* Scrollbar styling */
+.docs-sidebar, .docs-content {
+  scrollbar-width: thin;
+  scrollbar-color: #b39ddb #2a1b3d;
+}
+
+.docs-sidebar::-webkit-scrollbar,
+.docs-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.docs-sidebar::-webkit-scrollbar-track,
+.docs-content::-webkit-scrollbar-track {
+  background: #2a1b3d;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb,
+.docs-content::-webkit-scrollbar-thumb {
+  background-color: #b39ddb;
+  border-radius: 4px;
+}
+
+.docs-sidebar::-webkit-scrollbar-thumb:hover,
+.docs-content::-webkit-scrollbar-thumb:hover {
+  background-color: #ffcc80;
+}
+
+/* Style de base pour les liens */
+.docs-content a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Animation d'une barre en bas du lien */
+.docs-content a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Position de la barre */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #b39ddb;
+  transform: scaleX(0); /* Barre masquée au départ */
+  transform-origin: right; /* Point de départ de l'animation */
+  transition: transform 0.3s ease;
+}
+
+/* Effet de hover : couleur + animation de la barre */
+.docs-content a:hover {
+    color: #e8deeb;
+}
+
+.docs-content a:hover::after {
+  transform: scaleX(1); /* La barre s'étend */
+  transform-origin: left; /* Effet de glissement de gauche à droite */
+}
+
+/* Bouton de téléchargement stylisé */
+.docs-download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6c558c, #b39ddb); /* Dégradé élégant */
+  color: #ffffff; /* Couleur du texte */
+  text-decoration: none;
+  font-size: 1.2rem; /* Taille du texte */
+  font-weight: bold;
+  padding: 12px 24px; /* Espacement interne */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Ombre pour la profondeur */
+  transition: all 0.3s ease-in-out; /* Animation fluide */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Icône à gauche */
+.docs-download-button img {
+  margin-right: 12px;
+  height: 50px; /* Taille de l'icône */
+  width: auto;
+}
+
+/* Effets au survol */
+.docs-download-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Animation pour l'effet de clic */
+.docs-download-button:active {
+  transform: scale(0.97); /* Réduction légère à l'appui */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre réduite */
+}
+
+/* Animation supplémentaire : ajout d'un effet d'onde */
+.docs-download-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.docs-download-button:hover::after {
+  transform: scale(3);
+  opacity: 0.2;
+}
+
+.tip-block {
+  border-left: 4px solid #4caf50;
+  background-color: #243b24; /* Plus sombre pour un meilleur contraste */
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  color: #e0f7e9; /* Texte clair pour contraster avec le fond */
+}
+
+.tip-block p {
+  margin: 0;
+  font-size: 1rem;
+  color: #e0f7e9;
+  line-height: 1.6;
+}
+
+.tip-block strong {
+  color: #ffffff;
+}
+
+/* Styles Responsives */
+@media (max-width: 768px) {
+  .docs-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .docs-sidebar {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    border-bottom: 1px solid #2a1b3d;
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  .docs-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .docs-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .docs-menu > li {
+    margin-bottom: 0;
+    flex: 1;
+    text-align: center;
+  }
+
+  .docs-menu > li > a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .docs-content {
+    border-left: none;
+    padding: 20px;
+  }
+
+  .docs-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .docs-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .docs-content p,
+  .docs-content li {
+    font-size: 0.95rem;
+  }
+}
