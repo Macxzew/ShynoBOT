@@ -339,7 +339,7 @@ function copyToClipboard(text) {
 
 // Load and Display Commands from commands.json
 function loadCommands() {
-  fetch("commands.json")
+  fetch("/assets/json/commands.json")
     .then((response) => response.json())
     .then((data) => initializeCommands(data.sections))
     .catch((error) => console.error("Failed to load commands.json:", error));
